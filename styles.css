@@ -1,0 +1,39 @@
+*{  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color:rgba(210, 240, 179, 0.455);
+    font-family: sans-serif;
+    font-size: 3rem;
+}
+
+.grid-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(154, 125, 181);
+    border: solid 2px black;
+    border-radius: 10px;
+     transition: transform 0.2s ease-in-out;
+     /*introducimos las imagenes en el grid como backgroud*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.grid-item:hover{
+    filter:opacity();
+    transform: scale(1.04);
+
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    gap: 20px;
+    padding: 20px;
+    grid-auto-flow:dense ;
+}
